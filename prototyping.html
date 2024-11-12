@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototüüpimine ehk Prototyping</title>
+    <style>
+        body {
+            background-color: #f0f0f5;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h2, h3 {
+            color: #333;
+        }
+        img {
+            display: block;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 800px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:nth-child(odd) {
+            background-color: #e9f5e9;
+        }
+        tr:hover {
+            background-color: #d4e8d4;
+        }
+    </style>
+</head>
+<body>
+    <h2>Prototüüpimine ehk Prototyping</h2>
+    <p>
+        Prototüüp on süsteemi algne versioon, mida kasutatakse disaini võimaluste katsetamiseks ning ideede demonstreerimiseks.
+        Prototüüpe saab kasutada erinevates arenduse faasides, näiteks nõuete analüüsi etapil nende leidmiseks ja valideerimiseks;
+        disaini etapil valikuvõimaluste uurimiseks ning kasutajaliidese kavandamiseks.
+    </p>
+    <p><strong>Kasu prototüüpimisest:</strong> parem süsteemi kasutusmugavus, täpsem ühildumine kasutaja tegelike vajadustega,
+        parem kvaliteet ja hooldatavus ning väiksem vaev arendamisel.</p>
+
+    <h3>Joonis 1-4 Prototüübi loomise protsess</h3>
+    <img src="prototyping.jpg" alt="Prototüüpimise protsessi näide">
+
+    <h2>Prototüüpimise etapid</h2>
+    <ul>
+        <li><strong>Nõuete kogumine:</strong> Seda tehakse üldisemal tasemel ja fikseeritakse, mida on kindlasti vaja edaspidi täpsustama hakata.</li>
+        <li><strong>Kiire kavandamine:</strong> Keskendub nähtavale osale (sisend, väljund, vormid) ja selle tulemuseks on prototüüp. Klient hindab prototüüpi ja oskab selle alusel ka oma soove täpsustada.</li>
+        <li><strong>Iteratsioon prototüübi parandamiseks:</strong> Prototüüpi parandatakse kuni see rahuldab kasutajat. Samal ajal saab arendaja uusi teadmisi kliendi soovide kohta.</li>
+        <li><strong>Prototüübi arendamine:</strong> Kasutatakse kiire prototüüpimise keeli ja tööriistu, keskendudes arusaamatutele funktsionaalsustele, mitte vigade kontrollile või turvalisusele.</li>
+    </ul>
+
+    <h2>Prototüüpimise tüübid</h2>
+    <p>Prototüüpe saab luua erinevatel põhimõtetel, näiteks:</p>
+    <ul>
+        <li><strong>Ühekordne prototüüpimine (Throw away prototyping):</strong> Need prototüübid likvideeritakse peale loomist, sest nad ei sobi lõplikuks süsteemiks.</li>
+        <li><strong>Evolutsiooniline prototüüpimine (Evolutionary prototyping):</strong> Prototüüpi täiustatakse pidevalt, et jõuda lõpliku lahenduseni.</li>
+        <li><strong>Lisanduv prototüüpimine (Incremental prototyping):</strong> Arendatakse väikeste osade kaupa, et saavutada terviklik süsteem järk-järgult.</li>
+    </ul>
+
+    <h2>Kokkuvõte</h2>
+    <p>
+        Erinevalt koskmudelist ei koostata iteratiivsete arendusmudelite järgi kõikehõlmavat analüüsidokumenti,
+        mis sisaldab muutumatuid kasutajate vajadusi. Iteratiivsed mudelid võimaldavad hõlpsamini süsteemi muuta,
+        saada kasutajatelt varajast tagasisidet ja testida süsteemi arhitektuurilisi lahendusi varajases faasis.
+    </p>
+    <p>
+        Ei ole ühte, parimat süsteemiarenduse mudelit. Otsus, millist mudelit valida, sõltub konkreetsest tarkvaraprojektist,
+        meeskonna oskustest ja teadmistest, ajagraafikust ning kliendi vajaduste selgusest ja stabiilsusest.
+    </p>
+
+    <h2>Prototüüpimise plussid ja miinused</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Head</th>
+                <th>Vead</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Kasutajate tagasiside varajases faasis aitab vältida hilisemaid suuri muutusi.</td>
+                <td>Võib tekitada kliendile liiga kõrgeid ootusi lõpptulemuse suhtes, kui prototüüp on liiga realistlik.</td>
+            </tr>
+            <tr>
+                <td>Kiire iteratsioon võimaldab testida erinevaid lahendusi ja kohandada vastavalt vajadustele.</td>
+                <td>Kulukas ja aeganõudev, kui kasutatakse kõrge täpsusega prototüüpe, mis nõuavad detailset tööd.</td>
+            </tr>
+            <tr>
+                <td>Aitab tuvastada ja lahendada probleeme enne lõpliku toote arendamist.</td>
+                <td>Prototüübi loomine võib olla ajamahukas, eriti suuremate projektide puhul.</td>
+            </tr>
+            <tr>
+                <td>Parandab lõpptoodet, pakkudes realistlikku testkeskkonda ja hinnates süsteemi kasutajamugavust.</td>
+                <td>Kõrge täpsusega prototüüpimine võib vajada palju ressursse ja spetsiaalseid tööriistu.</td>
+            </tr>
+            <tr>
+                <td>Võimaldab oluliste otsuste tegemist ja riskide vähendamist varajases etapis.</td>
+                <td>Kui prototüüpe on mitu, võib see põhjustada segadust lõpliku lahenduse osas.</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

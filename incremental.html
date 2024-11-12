@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inkrementaalne arendusmudel</title>
+    <style>
+        body {
+            background-color: #f0f0f5;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h2, h3 {
+            color: #333;
+        }
+        img {
+            display: block;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 800px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50; /* Pehme roheline värv */
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:nth-child(odd) {
+            background-color: #e9f5e9; /* Kergelt roheline toon */
+        }
+        tr:hover {
+            background-color: #d4e8d4; /* Tumedam roheline hover-efekt */
+        }
+    </style>
+</head>
+<body>
+    <h2>Inkrementaalne arendusmudel ehk incremental</h2>
+    <p>
+        Tarkvaraarenduse üks võtmeküsimusi on - kuidas tulla toime muudatustega, sest suurte tarkvaraprojektide puhul on muutused vältimatud.
+        Äritegevus muutub ja see toob endaga kaasa muutunud nõuded, tekivad uued tehnoloogiad, mida oleks otstarbekas tarkvarasüsteemides nende täiustamiseks rakendada ning muutuvad platvormid, millele süsteem on rajatud.
+        Nimetatud muutused nõuavad ümbertegemist ning maksab nii nõuete korduv analüüsimine koos teostusega kui ka uute funktsionaalsuste realiseerimine.
+        Muudatuste maksumust tuleb hoida nii väiksena kui võimalik. Seega tuleb arendusprotsessi tuua sisse tegevused, mis aitavad muudatusi ette näha enne kui nende sisseviimine olulist tööd nõuab.
+        Näiteks prototüüpimise abil saab kliendile näidata varakult süsteemi olulisi omadusi. Muudatusi on parem teha siis, kui nende sisseviimine on võimalikult odav.
+        Sellest tulenevalt on mõistlik toote järk-järguline (inkrementaalne) arendus ja üleandmine. Nii saab muudatusi teha ka nendes osades, mida pole veel arendama asutud.
+    </p>
+
+    <h2>Iteratiivne ja inkrementaalne arendus</h2>
+    <p><strong>Inkrementaalne arendus</strong> on etapiviisiline ja ajagraafikut järgiv strateegia, kus süsteemi erinevaid osi arendatakse erinevatel aegadel ja erineva kiirusega ning kui üks osa valmis saab, integreeritakse see juba valmis süsteemiga. Alternatiivne strateegia oleks kodeerida kõik süsteemi osad ja siis kogu kood integreerida ühekorraga.</p>
+    <p><strong>Iteratiivne arendus</strong> on nö muutmisstrateegia, kus nähakse ette olemasolevate süsteemi osade ümbertegemine ja parandamine. Alternatiivne strateegia oleks planeerida tegevused selliselt, et kõik tehtaks õigesti esimesel katsel.</p>
+
+    <h3>Inkrementaalse arendusmudel joonis</h3>
+    <img src="Inkrementaalne.jpg" alt="Inkrementaalne arendumudel joonis">
+
+    <h2>Plussid ja miinused tabelina välja toodud</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Head</th>
+                <th>Vead</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Järkjärguline arendus ja testimine võimaldab leida ja parandada vigu varasemates osades.</td>
+                <td>Integratsiooniprobleemid, kuna iga uue osa liitmine olemasolevasse süsteemi võib olla keeruline.</td>
+            </tr>
+            <tr>
+                <td>Väiksemad riskid, kuna süsteemi arendatakse osade kaupa.</td>
+                <td>Sõltuvus varasemate osade kvaliteedist, mis võib hiljem põhjustada ümbertegemisi.</td>
+            </tr>
+            <tr>
+                <td>Kasutajate ja klientide tagasiside integreerimine, mis võimaldab paremini vastata nende vajadustele.</td>
+                <td>Pikem arendusaeg suurte süsteemide puhul, kuna iga osa nõuab eraldi tähelepanu.</td>
+            </tr>
+            <tr>
+                <td>Paindlikkus prioriteetide muutmisel ja võimalus arendada kõige olulisemad funktsioonid esimesena.</td>
+                <td>Võib olla kulukam, kuna pidev testimine ja kohandamine võib nõuda rohkem ressursse.</td>
+            </tr>
+            <tr>
+                <td>Kiirem turule jõudmine, kuna iga valminud osa on potentsiaalselt kasutatav.</td>
+                <td>Oodatust keerukam projektijuhtimine, kuna projekt koosneb mitmest etapist ja vajab pidevat planeerimist.</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
