@@ -1,131 +1,127 @@
-<!-- Mis on uppercase vahendid -->
- <!-- Mille jaoks neid kasutatakse -->
-<!-- Millised vahendid saab kasutada X arendusmudeli elutsuklis-->
-<!-- 2 näidet uppercase  vahendist mida veel kasutanud ei ole  -->
- <!-- töörista nimi / logo 
-      töörista programmi akna pilt
-      Mida tööristaga teha annab  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UpperCASE Vahendid</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #222;
+        }
 
-    
-      <!DOCTYPE html>
-      <html lang="en">
-      <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Upercase</title>
-      </head>
-      <body>
-        
-      </body>
-      </html>
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 2rem auto;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
-      <h3> Mis on upercase vahendid ?</h3>
-      <p>UpperCASE vahendid (ülemise taseme CASE-vahendid) on tarkvaraarenduse tööriistad,
-         mida kasutatakse tarkvaraarenduse varasemates etappides, nagu nõuete analüüs, süsteemidisain ja projekteerimine.
-          Need keskenduvad arenduse abstraktsematele ja strateegilisematele aspektidele.
+        h1 {
+            text-align: center;
+            margin-top: 1rem;
+            color: #1e88e5;
+        }
 
-        UpperCASE vahendite eesmärk
-        Toetada nõuete kogumist ja haldamist.
-        Aidata süsteemi disainis ja mudelite loomisel (nt UML-diagrammid).
-        Luua dokumentatsioon, mida saab kasutada arenduse hilisemates etappides.
-        Näited UpperCASE vahenditest
-        IBM Rational Rose
-        
-        UML-diagrammide koostamine ja süsteemi arhitektuuri projekteerimine.
-        Enterprise Architect
-        
-        Süsteemi ja tarkvara modelleerimine, sh nõuete haldus ja arhitektuuriline disain.
-        Lucidchart või Microsoft Visio
-        
-        Voogdiagrammide ja süsteemimudelite loomine.
-        Balsamiq ja Figma
-        
-        Kasutajaliidese prototüüpide ja skeemide loomiseks.
-        Jama Software
-        
-        Nõuete jälgitavus ja haldus.
-        Confluence või Jira
-        
-        Dokumentatsiooni haldamine ja meeskonna koostöö nõuete kogumisel.
-        UpperCASE vahendite kasutamise eelised
-        Aitab dokumenteerida ja visualiseerida süsteemi arenduse varaseid nõudeid ja disainiplaane.
-        Hõlbustab meeskonna suhtlust ja selgete plaanide loomist.
-        Parandab hilisemate etappide kvaliteeti, kuna nõuded ja disain on selgelt määratletud.
-        Kus kasutatakse UpperCASE vahendeid?
-        Kaskaadmudelis: Sobivad väga hästi, kuna mudel eeldab põhjalikku planeerimist enne arenduse algust.
-        V-mudelis: Kasutatakse nõuete määratlemisel ja süsteemi projekteerimisel (vasak pool V-st).
-        Agile-mudelis: Harvem, kuna agile rõhub rohkem iteratiivsele lähenemisele, kuid neid saab kasutada sprintide planeerimisel.
-        UpperCASE vahendid moodustavad olulise osa tarkvaraarenduse planeerimise ja projekteerimise tööriistade komplektist, tagades projekti stabiilse ja organiseeritud aluse.</p>
+        h3 {
+            color: #1e88e5;
+            margin-top: 2rem;
+            border-bottom: 2px solid #1e88e5;
+            padding-bottom: 0.5rem;
+        }
 
+        p {
+            margin: 1rem 0;
+            font-size: 1rem;
+            color: #444;
+        }
 
-      <h3>Mille jaoks neid kasutatakse ?</h3>
-      <p>ülemise taseme" CASE-vahendid (upper CASE tools) toetavad analüüsi ja projekteerimist.
-         Peamiselt on nad kasutusel kasutajanõuete analüüsimisel ja dokumenteerimisel.
-        Nad on ennekõike mõeldud visualiseerimiseks, erinevate skeemide koostamiseks ja ka dokumentatsiooni genereerimiseks.
-        Toetavad traditsiooniliste diagrammikeelte kasutamist (olem-seos diagrammid, andmemudelid, UML-skeemid, jne).</p>
+        ul {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
 
-      <h3>Millised vahendid saab kasutada X arenudsmudeli elutsükli ?</h3>
-      <p>Näidisarendusmudeli elutsüklis kasutatavad vahendid sõltuvad mudeli etappidest ja sellest,
-        kas tegemist on kaskaadmudeli, agile-mudeli, V-mudeli või muu lähenemisega.
-        Allpool on välja toodud üldine jaotumine koos sobivate tööriistadega,
-        mida saab kasutada erinevates arendusmudeli etappides.
+        ul li {
+            margin: 0.5rem 0;
+        }
 
-        1. Nõuete kogumine ja haldamine
-        Vahendid:
-        IBM DOORS: Nõuete haldamise tööriist.
-        Jira: Nõuete ja arendusülesannete jälgimiseks.
-        Confluence: Dokumentatsiooni koostamine ja jagamine.
-        Miro või Lucidchart: Nõuete kaardistamine ja visuaalne esitamine.
-        2. Süsteemi disain ja arhitektuur
-        Vahendid:
-        Enterprise Architect: Süsteemidisaini ja UML-diagrammide koostamine.
-        Microsoft Visio: Süsteemi voogude ja diagrammide loomine.
-        Draw.io: Tasuta ja lihtne diagrammide koostamise tööriist.
-        Balsamiq või Figma: Kasutajaliidese prototüüpimine.
-        3. Arendus ja implementeerimine
-        Vahendid:
-        Visual Studio Code: Koodiredaktor paljude laiendustega.
-        IntelliJ IDEA: Java ja muude keelte arendamiseks.
-        GitHub või GitLab: Versioonihaldus ja koostöö.
-        Maven või Gradle: Ehitusvahendid ja sõltuvuste haldamine.
-        Docker: Konteinerite kasutamine keskkondade eraldamiseks.
-        4. Testimine
-        Vahendid:
-        Selenium: Automatiseeritud testimine veebirakenduste jaoks.
-        JUnit või TestNG: Üksustestimise raamistikud.
-        Postman: API-testimiseks.
-        TestRail: Testihalduse ja aruandluse tööriist.
-        SonarQube: Koodikvaliteedi analüüs ja vigade tuvastamine.
-        5. Süsteemi juurutamine
-        Vahendid:
-        Jenkins või GitHub Actions: CI/CD torujuhtmete automatiseerimine.
-        Ansible või Puppet: Süsteemide automatiseeritud juurutamine ja haldamine.
-        Kubernetes: Süsteemi orkestreerimine ja konteinerite haldamine.
-        6. Hooldus ja parendamine
-        Vahendid:
-        Jira või Bugzilla: Vigade jälgimine ja haldamine.
-        Nagios või Zabbix: Süsteemide monitooring.
-        Splunk või ELK Stack: Logide haldus ja analüüs.
-        GitHub või GitLab: Pidev versioonihaldus ja koostöö arendusmeeskonnaga.
-        Praktiline näide: Agile-mudel
-        Nõuete kogumine ja ülesannete haldamine: Jira, Confluence.
-        Projekteerimine ja disain: Lucidchart, Figma.
-        Arendus: Visual Studio Code, GitHub.
-        Testimine: Selenium, Postman.
-        Juurutamine: Jenkins, Docker.
-        Praktiline näide: Kaskaadmudel
-        Planeerimine ja projekteerimine: IBM DOORS, Enterprise Architect.
-        Arendus: IntelliJ IDEA, GitHub.
-        Testimine: TestRail, JUnit.
-        Hooldus: Nagios, Zabbix.
-        Kokkuvõte
-        Iga arendusmudel vajab konkreetseid tööriistu, et toetada erinevaid etappe:
-        planeerimine,
-        disain,
-        arendus,
-        testimine,
-        juurutamine ja hooldus.
-        Oluline on valida vahendid vastavalt projekti ulatusele, mudeli nõuetele ja meeskonna kogemusele.</p>
+        .tool {
+            margin: 1.5rem 0;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #f9f9f9;
+        }
 
-      <h3> Kaks näidet uppercase vahendist mida ma veel kasutanid ei ole </h3>
+        .tool h4 {
+            color: #1e88e5;
+        }
 
+        .tool p {
+            color: #333;
+        }
+
+        a.button-link {
+            display: inline-block;
+            margin: 1rem 0;
+            padding: 0.7rem 1.5rem;
+            background: #1e88e5;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        a.button-link:hover {
+            background: #1565c0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>UpperCASE Vahendid</h1>
+
+        <h3>Mis on UpperCASE vahendid?</h3>
+        <p>UpperCASE vahendid (ülemise taseme CASE-vahendid) on tarkvaraarenduse tööriistad, 
+        mida kasutatakse tarkvaraarenduse varasemates etappides, nagu nõuete analüüs, süsteemidisain ja projekteerimine. 
+        Need keskenduvad arenduse abstraktsematele ja strateegilisematele aspektidele.</p>
+
+        <h3>Mille jaoks neid kasutatakse?</h3>
+        <p>UpperCASE vahendeid kasutatakse analüüsi ja projekteerimise toetamiseks. Need aitavad 
+        visualiseerida ja dokumenteerida süsteemiarenduse varaseid nõudeid ja disainiplaane, 
+        hõlbustades meeskonna suhtlust ja projekti organiseerimist.</p>
+
+        <h3>Millised vahendid saab kasutada X arendusmudeli elutsüklis?</h3>
+        <p>Näited vahenditest arendusmudeli erinevates etappides:</p>
+        <ul>
+            <li><strong>Nõuete kogumine:</strong> IBM DOORS, Jira, Confluence</li>
+            <li><strong>Süsteemi disain:</strong> Enterprise Architect, Lucidchart, Microsoft Visio</li>
+            <li><strong>Arendus:</strong> Visual Studio Code, IntelliJ IDEA, GitHub</li>
+            <li><strong>Testimine:</strong> Selenium, JUnit, TestRail</li>
+            <li><strong>Juurutamine:</strong> Jenkins, Docker, Kubernetes</li>
+        </ul>
+
+        <h3>Kaks näidet UpperCASE vahendist, mida ma veel kasutanud ei ole</h3>
+        <div class="tool">
+            <h4>IBM Rational Rose</h4>
+            <p>IBM Rational Rose on UML-diagrammide koostamise ja süsteemiarhitektuuri projekteerimise tööriist, 
+            mis võimaldab visualiseerida ja modelleerida tarkvarasüsteeme, aidates seeläbi kaasa süsteemi selge struktuuri loomisele.</p>
+        </div>
+
+        <div class="tool">
+            <h4>Enterprise Architect</h4>
+            <p>Enterprise Architect on modelleerimise ja disaini tööriist, mis toetab nii nõuete haldamist, 
+            arhitektuuri kujundamist kui ka süsteemi dokumenteerimist, pakkudes laialdast tuge arendusprotsessi erinevates etappides.</p>
+        </div>
+
+        <a href="main.html" class="button-link">Tagasi</a>
+    </div>
+</body>
+</html>
