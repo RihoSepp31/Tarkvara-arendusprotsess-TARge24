@@ -16,6 +16,12 @@
             float: right;
             margin: 0 0 15px 15px;
         }
+        .centered-image {
+            display: block;
+            margin: 20px auto; /* Keskele ja väike ülemine/alumine vahe */
+            max-width: 50%; /* Maksimaalne laius */
+            height: auto; /* Säilitab proportsioonid */
+        }
         h1, h2 {
             color: #ac5656; /* tumehall teksti värv */
         }
@@ -67,7 +73,9 @@
 </head>
 <body>
     <!-- Pilt, mis on paremal ja lehe ülaosas -->
-    <img src="Riho.png " alt="Riho Sepp" width="300">
+    <img src="Riho.png" alt="Riho Sepp" width="300">
+    <!-- Pilt, mis on keskel ja väiksem -->
+    <img src="./Pildid/how_it_people_see.jpg" class="centered-image" width="1000">
 
     <h1>Kes ma olen</h1>
     <p>Minu nimi on Riho Sepp ja ma olen IT spetsialist.</p>
@@ -83,9 +91,6 @@
     <a href="casevahendid/main.html" class="button-link">Case Vahendid</a>
     <a href="https://rihosepp.com/" class="button-link">Portfoolium</a>
     
-    
-    
-
     <!-- Taustal liikuvad mullid -->
     <div class="bubble" style="left: 10%;"></div>
     <div class="bubble" style="left: 30%;"></div>
