@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoini Kalkulaatori Terminid ja Seletused</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            text-align: center;
+            color: #007BFF;
+            font-size: 2.5em;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        h3 {
+            margin-top: 20px;
+            color: #0056b3;
+        }
+        p, pre {
+            margin: 10px 0;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: Consolas, "Courier New", monospace;
+            color: #333;
+        }
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+        .important {
+            font-size: 1.2em;
+            color: black;
+            font-weight: bold;
+        }
+        ul {
+            margin: 10px 0 20px 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: Consolas, "Courier New", monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bitcoini Kalkulaatori Terminid</h1>
+        <h2>Seletused ja Näited</h2>
+
+        <h3>1. <span class="important">`switch` lause</span></h3>
+        <p>`switch` lauset kasutatakse selleks, et valida tegevus erinevate väärtuste alusel. Seda kasutatakse tihti siis, kui on vaja käsitleda mitmeid erinevaid tingimusi.</p>
+        <p class="highlight">See on kasulik mitme erineva tingimuse käsitlemiseks ilma liigsete `if`-lausete kasutamiseta.</p>
+        <p><strong>Näide:</strong></p>
+        <pre>
+<span class="important">switch</span> (valuuta) {
+    case "EUR":
+        result = bitcoinAmount * euroKurs;
+        break;
+
+    case "USD":
+        result = bitcoinAmount * dollarKurs;
+        break;
+
+    <span class="highlight">default</span>:
+        resultLabel.Text = "Vali valuuta!";
+        break;
+}
+        </pre>
+
+        <h3>2. <span class="important">API</span></h3>
+        <p>API (<span class="highlight">Application Programming Interface</span>) on süsteem, mis võimaldab tarkvaral suhelda teiste tarkvaradega. Selles projektis kasutatakse Coindesk API-d, et saada reaalajas Bitcoini kursse.</p>
+        <p><strong>Näide API päringust:</strong></p>
+        <pre>
+<span class="important">string</span> url = "https://api.coindesk.com/v1/bpi/currentprice.json";
+HttpWebRequest request = (<span class="important">HttpWebRequest</span>)WebRequest.Create(url);
+request.Method = "GET";
+
+<span class="important">var</span> webResponse = request.GetResponse();
+var webStream = webResponse.GetResponseStream();
+        </pre>
+
+        <h3>3. <span class="important">Klassid</span></h3>
+        <p>Klassid on objekt-orienteeritud programmeerimise põhielemendid. Need kirjeldavad, kuidas objektid käituvad ja milliseid omadusi need sisaldavad.</p>
+        <p class="highlight">Klassid aitavad koodi struktureerida ja lihtsustavad objektide loomist ja haldamist.</p>
+        <p><strong>Klassi näide:</strong></p>
+        <pre>
+public class BitcoinRates {
+    public Bpi Bpi { get; set; }
+}
+
+public class Bpi {
+    public Currency USD { get; set; }
+    public Currency EUR { get; set; }
+    public Currency GBP { get; set; }
+}
+
+public class Currency {
+    public string code { get; set; }
+    public double rate_float { get; set; }
+}
+        </pre>
+
+        <h3>4. <span class="important">`null` kontroll</span></h3>
+        <p>Enne objektide või omaduste kasutamist on oluline kontrollida, kas need on <span class="highlight">`null`</span>, et vältida vigu.</p>
+        <p><strong>Näide `null` kontrollist:</strong></p>
+        <pre>
+if (<span class="highlight">newbitcoinrate?.Bpi?.EUR == null</span>) {
+    MessageBox.Show("EUR andmed pole saadaval.", "Viga");
+    return;
+}
+        </pre>
+
+        <h3>5. <span class="important">`try-catch`</span></h3>
+        <p>`try-catch` plokki kasutatakse vigade käsitlemiseks. Kui koodis tekib viga, saab selle <span class="highlight">`catch`</span> osas käsitleda.</p>
+        <p class="highlight">See on oluline, et vältida programmi kokkujooksmist ootamatute vigade korral.</p>
+        <p><strong>Näide API vigade käsitlemisest:</strong></p>
+        <pre>
+try {
+    var webResponse = request.GetResponse();
+    // Teeme midagi vastusega
+} <span class="highlight">catch</span> (Exception ex) {
+    MessageBox.Show($"API päring ebaõnnestus: {ex.Message}", "Viga");
+}
+        </pre>
+
+        <h3>6. <span class="important">JSON ja deserialiseerimine</span></h3>
+        <p>JSON (<span class="highlight">JavaScript Object Notation</span>) on andmevahetusvorming, mida kasutatakse API-de andmete edastamiseks. Deserialiseerimine tähendab JSON andmete teisendamist objektideks, mida saab koodis kasutada.</p>
+        <p><strong>Näide JSON andmete deserialiseerimisest:</strong></p>
+        <pre>
+using Newtonsoft.Json;
+
+var rates = responseReader.ReadToEnd();
+var bitcoinRates = JsonConvert.DeserializeObject<BitcoinRates>(rates);
+        </pre>
+    </div>
+</body>
+</html>
