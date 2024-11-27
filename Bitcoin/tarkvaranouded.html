@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoini Kalkulaator - Tarkvaranõuded</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+            text-align: center;
+        }
+        h3 {
+            color: #555;
+            margin-top: 20px;
+        }
+        ul {
+            margin: 10px 0 20px 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bitcoini Kalkulaator</h1>
+        <h2>Tarkvaranõuded</h2>
+
+        <h3>1. Funktsionaalsed nõuded</h3>
+        <ul>
+            <li>Kalkulaator peab võimaldama kasutajal sisestada Bitcoini koguse.</li>
+            <li>Kasutaja peab saama valida valuuta, millesse konverteerida:
+                <ul>
+                    <li>EUR (Euro)</li>
+                    <li>USD (USA Dollar)</li>
+                    <li>GBP (Suurbritannia Nael)</li>
+                    <li>EEK (Eesti Kroon)</li>
+                </ul>
+            </li>
+            <li>Tarkvara peab hankima reaalajas valuutakursid Coindesk API-st.</li>
+            <li>Kui Coindesk API ei paku GBP kurssi, peab tarkvara arvutama GBP kursi USD alusel ligikaudse väärtusega.</li>
+            <li>Eesti Krooni (EEK) arvutamine peab toimuma fikseeritud kursiga: 1 EUR = 15.6466 EEK.</li>
+            <li>Kalkulaator peab kuvama tulemuse korrektselt koos vastava valuuta sümboli või nimega.</li>
+            <li>Kui sisend on vigane (nt mitte-numbriline või negatiivne), peab tarkvara kuvama sobiva veateate.</li>
+        </ul>
+
+        <h3>2. Mittefunktsionaalsed nõuded</h3>
+        <ul>
+            <li>Tarkvara peab olema kasutajasõbralik, puhta ja intuitiivse kasutajaliidesega.</li>
+            <li>Kalkulaator peab kiiresti reageerima kasutaja sisenditele ja API-päringutele.</li>
+            <li>Tarkvara peab oskama käsitleda võrguvigu API-st andmete hankimisel.</li>
+            <li>Kood peab olema modulaarne ja kergesti laiendatav, et toetada lisavaluutasid või uusi API-sid tulevikus.</li>
+        </ul>
+
+        <h3>3. Tarkvarakeskkonna nõuded</h3>
+        <ul>
+            <li>Tarkvara töötab Windowsi platvormidel.</li>
+            <li>Arendustööriistad: Visual Studio koos C# ja .NET Frameworkiga.</li>
+            <li>Reaalajas kursi hankimiseks on vajalik internetiühendus.</li>
+            <li>Välised sõltuvused:
+                <ul>
+                    <li>Newtonsoft.Json JSON andmete parsimiseks API-st.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>4. Kasutajaliidese nõuded</h3>
+        <ul>
+            <li>Kasutajaliides peab sisaldama:
+                <ul>
+                    <li>Tekstivälja Bitcoini koguse sisestamiseks.</li>
+                    <li>Rippmenüüd valuuta valimiseks.</li>
+                    <li>Nuppu arvutuse käivitamiseks.</li>
+                </ul>
+            </li>
+            <li>Tulemus peab olema nähtaval kujul ekraanil, näidates konverteeritud väärtust ja valitud valuutat.</li>
+            <li>Vead peavad olema esitatud kasutajasõbralikus vormis, näiteks veateade või märkus ekraanil.</li>
+        </ul>
+
+        <h3>5. Piirangud</h3>
+        <ul>
+            <li>Praegu toetab kalkulaator ainult nelja valuutat: EUR, USD, GBP ja EEK.</li>
+            <li>Kui API pole saadaval, ei ole võimalik reaalajas konverteerimist läbi viia, ning kasutajale kuvatakse veateade.</li>
+            <li>Eesti Kroon (EEK) arvutatakse ainult fikseeritud kursiga, mitte reaalajas andmete põhjal.</li>
+        </ul>
+    </div>
+</body>
+</html>

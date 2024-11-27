@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Kalkulaator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #0f0f0f;
+        }
+        header {
+            background-color: #ff9900;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav {
+            background: #0f0f0f;
+            color: white;
+            display: flex;
+            justify-content: center;
+            padding: 0.5rem 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 2rem;
+            line-height: 1.6;
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+        .image-container {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+        footer a {
+            color: #ff9900;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bitcoin - Digitaalne Valuuta</h1>
+        <p>Antud lehel tutvustan tunnis loodud Bitcoin kalkulaatorit, tarkvara nõuete dokumenti ja projekti repostooriumit.</p>
+    </header>
+
+    <nav>
+        <a href="#about">Tarkvara nõuete dokument</a>
+        <a href="#calculator">Bitcoini kalkulaator</a>
+        <a href="#flowchart">Flowchart</a>
+    </nav>
+
+    <main>
+        <section id="about">
+            <h2>Mis on Bitcoin?</h2>
+            <p>Bitcoin on digitaalne valuuta, mis loodi 2009. aastal tundmatu isiku või rühma poolt. See on detsentraliseeritud süsteem, mis põhineb plokiahela tehnoloogial.</p>
+        </section>
+
+        <section id="calculator">
+            <h2>Bitcoin Kalkulaatori Kirjeldus</h2>
+            <h3>Kalkulaatori funktsioonid</h3>
+            <ul>
+                <li>Bitcoini väärtuse arvutamine erinevates valuutades (EUR, USD, GBP, EEK).</li>
+                <li>Reaalajas andmete hankimine Coindesk API kaudu.</li>
+                <li>Tulemuste kuvamine valitud valuuta tähisega (nt "500 EUR").</li>
+            </ul>
+
+            <h3>Tehniline Kirjeldus</h3>
+            <p>Kalkulaator kasutab Coindesk API-d, et hankida reaalajas valuutakursid. Kursi teisendused tehakse järgmiste valemite alusel:</p>
+            <ul>
+                <li><strong>EUR:</strong> Bitcoini kogus korrutatakse EUR kursiga.</li>
+                <li><strong>USD:</strong> Bitcoini kogus korrutatakse USD kursiga.</li>
+                <li><strong>GBP:</strong> Bitcoini väärtus teisendatakse USD kaudu GBP-ks.</li>
+                <li><strong>EEK:</strong> Bitcoini väärtus teisendatakse EUR kaudu EEK-ks (1 EUR = 15.6466 EEK).</li>
+            </ul>
+            <p>Lisaks toetab kalkulaator kasutajasõbralikku liidest, mis võimaldab kiiresti arvutusi teha ja tulemusi vaadata.</p>
+        </section>
+
+        <section id="flowchart">
+            <h2>Flowchart</h2>
+            <div class="image-container">
+                <img src="../Pildid/Bitcoin_calculaator.png" alt="Bitcoin Kalkulaatori Flowchart" width="500">
+            </div>
+            <p>Ülalolev flowchart kirjeldab Bitcoini kalkulaatori töövoogu alates andmete sisestamisest kuni arvutuste ja tulemuste kuvamiseni.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Bitcoin Kalkulaator. <a href="https://github.com" target="_blank">Vaata projekti repostooriumit GitHubis</a>.</p>
+    </footer>
+</body>
+</html>
