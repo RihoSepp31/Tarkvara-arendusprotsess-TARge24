@@ -68,6 +68,15 @@
             font-family: Consolas, "Courier New", monospace;
             color: #d63384;
         }
+        .error-image {
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+            width: 400px; /* Suurem pilt */
+            height: auto; /* Säilitab proportsioonid */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
     </style>
 </head>
 <body>
@@ -80,7 +89,7 @@
         <p class="highlight">See on kasulik mitme erineva tingimuse käsitlemiseks ilma liigsete `if`-lausete kasutamiseta.</p>
         <p><strong>Näide:</strong></p>
         <pre>
-<span class="important">switch</span> (valuuta) {
+switch (valuuta) {
     case "EUR":
         result = bitcoinAmount * euroKurs;
         break;
@@ -89,7 +98,7 @@
         result = bitcoinAmount * dollarKurs;
         break;
 
-    <span class="highlight">default</span>:
+    default:
         resultLabel.Text = "Vali valuuta!";
         break;
 }
@@ -99,11 +108,11 @@
         <p>API (<span class="highlight">Application Programming Interface</span>) on süsteem, mis võimaldab tarkvaral suhelda teiste tarkvaradega. Selles projektis kasutatakse Coindesk API-d, et saada reaalajas Bitcoini kursse.</p>
         <p><strong>Näide API päringust:</strong></p>
         <pre>
-<span class="important">string</span> url = "https://api.coindesk.com/v1/bpi/currentprice.json";
-HttpWebRequest request = (<span class="important">HttpWebRequest</span>)WebRequest.Create(url);
+string url = "https://api.coindesk.com/v1/bpi/currentprice.json";
+HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
 request.Method = "GET";
 
-<span class="important">var</span> webResponse = request.GetResponse();
+var webResponse = request.GetResponse();
 var webStream = webResponse.GetResponseStream();
         </pre>
 
@@ -132,7 +141,7 @@ public class Currency {
         <p>Enne objektide või omaduste kasutamist on oluline kontrollida, kas need on <span class="highlight">`null`</span>, et vältida vigu.</p>
         <p><strong>Näide `null` kontrollist:</strong></p>
         <pre>
-if (<span class="highlight">newbitcoinrate?.Bpi?.EUR == null</span>) {
+if (newbitcoinrate?.Bpi?.EUR == null) {
     MessageBox.Show("EUR andmed pole saadaval.", "Viga");
     return;
 }
@@ -146,7 +155,7 @@ if (<span class="highlight">newbitcoinrate?.Bpi?.EUR == null</span>) {
 try {
     var webResponse = request.GetResponse();
     // Teeme midagi vastusega
-} <span class="highlight">catch</span> (Exception ex) {
+} catch (Exception ex) {
     MessageBox.Show($"API päring ebaõnnestus: {ex.Message}", "Viga");
 }
         </pre>
@@ -161,5 +170,8 @@ var rates = responseReader.ReadToEnd();
 var bitcoinRates = JsonConvert.DeserializeObject<BitcoinRates>(rates);
         </pre>
     </div>
+
+    <!-- Pilt, mis asetseb lehe paremas ääres, alumisel pool -->
+    <img class="error-image" src="../Pildid/errorline.png.jpg" alt="Error">
 </body>
 </html>
