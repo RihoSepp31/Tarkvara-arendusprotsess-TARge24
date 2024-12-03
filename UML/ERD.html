@@ -9,29 +9,29 @@
             font-family: Arial, Helvetica, sans-serif;
             line-height: 1.6;
             background: linear-gradient(to right, rgb(190, 156, 110), rgb(144, 202, 249), rgb(255, 183, 77));
-            /* Gradient, mis läheb vasakult paremale */
-            color: #333;
+            color: rgb(16, 17, 17);
             margin: 0;
             padding: 20px;
         }
         .container {
             max-width: 800px;
-            background: rgba(255, 255, 255, 0.95); /* Kergelt läbipaistev taust */
+            background: rgba(255, 255, 255, 0.9);
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             padding: 20px;
             margin: auto;
         }
-        h1 {
+        h1, h2 {
             color: black;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        p, ul {
-            margin-bottom: 20px;
         }
         ul {
             padding-left: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px 0;
         }
         .button-link {
             display: block;
@@ -56,18 +56,37 @@
 <body>
     <div class="container">
         <h1>Mis on ERD?</h1>
-        <p><strong>Entity Relationship Diagram (ERD)</strong> ehk entiteedi-seose diagramm on graafiline esitusviis, mida kasutatakse andmebaasi struktuuri visualiseerimiseks. 
-        ERD näitab entiteetide vahelisi seoseid ja annab ülevaate, kuidas andmed on organiseeritud ja omavahel seotud.</p>
-        <h2>ERD põhikomponendid</h2>
+        <p><strong>Entity Relationship Diagram (ERD)</strong> ehk entiteedi-seose diagramm on graafiline esitusviis, mida kasutatakse andmebaasi struktuuri visualiseerimiseks. ERD näitab entiteetide vahelisi seoseid ja annab ülevaate, kuidas andmed on organiseeritud ja omavahel seotud.</p>
+        
+        <h2>Kus kasutatakse ERD-d?</h2>
+        <p>ERD-d kasutatakse peamiselt:</p>
         <ul>
-            <li><strong>Entiteedid:</strong> Andmed, mida süsteemis salvestatakse (nt kliendid, tooted).</li>
-            <li><strong>Atribuudid:</strong> Entiteetide omadused või andmed (nt kliendi nimi, toote hind).</li>
-            <li><strong>Seosed:</strong> Näitavad, kuidas entiteedid on omavahel seotud.</li>
+            <li>Andmebaaside disainimisel ja analüüsimisel.</li>
+            <li>Infosüsteemide arendamisel ja dokumenteerimisel.</li>
+            <li>Protsesside visualiseerimiseks ja mõistmiseks.</li>
+            <li>Kõrg- ja madaltaseme arhitektuuri loomisel.</li>
         </ul>
-        <p>ERD-d kasutatakse andmebaasi disaini kavandamisel ja see on oluline tööriist andmeanalüüsi ja arendusprotsessi käigus.</p>
+
+        <h2>Ühenduselemendid ERD-s</h2>
+        <p>ERD kasutab visuaalseid elemente nagu entiteedid, atribuudid ja seosed, mis on kujutatud erinevate kujunditega:</p>
+        <ul>
+            <li><strong>Entiteedid:</strong> Andmed, mida hoitakse (nt tabelid andmebaasis). Tavaliselt kujutatud ristkülikutena.</li>
+            <li><strong>Atribuudid:</strong> Entiteetide omadused või andmed (nt veerud tabelis). Kujutatud ovaalidega.</li>
+            <li><strong>Seosed:</strong> Näitavad, kuidas entiteedid on omavahel seotud. Kujutatud rombidega.</li>
+        </ul>
+        <img src="../Pildid/ERD.jpg" alt="ERD elemendid näited" />
+
+        <h2>Võtmete tüübid</h2>
+        <ul>
+            <li><strong>Primary Key (PK):</strong> Ainulaadne tunnus, mis identifitseerib igat rida tabelis (nt kliendi ID).</li>
+            <li><strong>Foreign Key (FK):</strong> Väli, mis viitab teise tabeli Primary Key-le, et luua seos (nt tellimuse kliendi ID).</li>
+            <li><strong>Composite Key:</strong> Kombinatsioon mitmest väljast, mis koos moodustavad unikaalse identifikaatori (nt eesnimi ja sünnikuupäev).</li>
+            <li><strong>Key:</strong> Üldine termin, mis viitab väljadele, mida kasutatakse tabeli identifitseerimiseks ja seoste loomiseks.</li>
+        </ul>
+
         <h2>Kasulikud lingid</h2>
-        <a href="https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model" class="button-link">Wikipedia: Entity-Relationship Model</a>
-        <a href="uml.html" class="button-link">Tagasi</a>
+        <a href="https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model" class="button-link">Wikipedia</a>
+        <a href="uml.html" class="button-link">Tagasi UML lehele</a>
     </div>
 </body>
 </html>
