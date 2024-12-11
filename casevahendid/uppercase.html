@@ -68,15 +68,23 @@
             color: #333;
         }
 
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
         a.button-link {
             display: inline-block;
-            margin: 1rem 0;
             padding: 0.7rem 1.5rem;
             background: #1e88e5;
             color: #fff;
             text-decoration: none;
             border-radius: 5px;
             font-size: 1rem;
+            text-align: center;
         }
 
         a.button-link:hover {
@@ -114,17 +122,21 @@
             <h4>IBM Rational Rose</h4>
             <p>IBM Rational Rose on UML-diagrammide koostamise ja süsteemiarhitektuuri projekteerimise tööriist, 
             mis võimaldab visualiseerida ja modelleerida tarkvarasüsteeme, aidates seeläbi kaasa süsteemi selge struktuuri loomisele.</p>
+            <img src="../Pildid/IBM_Rational_Rose.jpg" alt="IBM Rational Rose">
         </div>
 
         <div class="tool">
             <h4>Enterprise Architect</h4>
             <p>Enterprise Architect on modelleerimise ja disaini tööriist, mis toetab nii nõuete haldamist, 
             arhitektuuri kujundamist kui ka süsteemi dokumenteerimist, pakkudes laialdast tuge arendusprotsessi erinevates etappides.</p>
+            <img src="../Pildid/enterprise_architect.jpg" alt="Enterprise Architect">
         </div>
 
-        <a href="main.html" class="button-link">Tagasi</a>
-        <a href="https://eopearhiiv.edu.ee/e-kursused/eucip/arendus/131_casevahendite_kasutuseesmrgid_ja_klassifikatsioon.html" class="button-link">Kasutatud materjal</a> 
-        <a href="https://www.umsl.edu/~sauterv/analysis/488_f02_papers/CASE.html#:~:text=Lower%20CASE%20tools%20are%20designed,compilers%20and%20test%20support%20tools." class="button-link">Kasutatud materjal 2</a> 
+        <div class="button-container">
+            <a href="main.html" class="button-link">Tagasi</a>
+            <a href="https://eopearhiiv.edu.ee/e-kursused/eucip/arendus/131_casevahendite_kasutuseesmrgid_ja_klassifikatsioon.html" class="button-link" target="_blank">Kasutatud materjal</a>
+            <a href="https://www.umsl.edu/~sauterv/analysis/488_f02_papers/CASE.html#:~:text=Lower%20CASE%20tools%20are%20designed,compilers%20and%20test%20support%20tools." class="button-link" target="_blank">Kasutatud materjal 2</a>
+        </div>
     </div>
 </body>
 </html>
