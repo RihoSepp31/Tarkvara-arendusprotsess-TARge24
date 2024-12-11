@@ -1,0 +1,86 @@
+/* Põhistiilid */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background: linear-gradient(to right, #1e262c, #00f2fe);
+    color: #d8c9c9;
+}
+
+/* Päis ja navigeerimine */
+header {
+    background-color: #98a0a8;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    color: #ffcc00;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffcc00;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Peamine sisu */
+main {
+    padding: 20px;
+}
+
+h2 {
+    color: #ffcc00;
+}
+
+ul {
+    background-color: rgba(0, 51, 102, 0.8);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+/* Jalus */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #003366;
+    color: #ffcc00;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.button-link {
+    display: inline-block;
+    background-color: #007bff; /* Sinine nupp */
+    color: white; /* Teksti värv */
+    padding: 15px 20px; /* Ruumi nuppu sees */
+    text-decoration: none; /* Ei mingit allajoonimist */
+    border-radius: 5px; /* Nupu ümardatud servad */
+    font-weight: bold; /* Rasvane tekst */
+    text-align: center; /* Keskjoondusega tekst */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Sujuv üleminek */
+}
+
+.button-link:hover {
+    background-color: #0056b3; /* Hoveril tumedam sinine */
+    transform: translateY(-2px); /* Kerge tõstmine hoveril */
+}
+
+.button-link:active {
+    background-color: #003f7f; /* Klõpsamisel veel tumedam sinine */
+    transform: translateY(2px); /* Klõpsamisel langetamine */
+}
