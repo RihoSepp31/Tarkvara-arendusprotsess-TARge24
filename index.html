@@ -4,100 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minu Õpimapp Tarkvara arendusprotsessis</title>
-    <style>
-        body {
-            background-color: #dedee6; /* neutraalne helehall taust */
-            font-family: Arial, sans-serif; /* lihtne ja loetav font */
-            margin: 20px;
-            overflow-x: hidden;
-            position: relative;
-        }
-        img {
-            float: right;
-            margin: 0 0 15px 15px;
-        }
-        .centered-image {
-            display: block;
-            margin: 20px auto; /* Keskele ja väike ülemine/alumine vahe */
-            max-width: 50%; /* Maksimaalne laius */
-            height: auto; /* Säilitab proportsioonid */
-        }
-        h1, h2 {
-            color: #ac5656; /* tumehall teksti värv */
-        }
-        .button-link {
-            display: block;
-            width: 100%;
-            max-width: 300px;
-            margin: 10px 0;
-            padding: 10px;
-            background-color: #2e629b;
-            color: #e0d6d6;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-        .button-link:hover {
-            background-color: #616972;
-        }
-        .bubble {
-            width: 20px;
-            height: 20px;
-            background-color: rgba(0, 150, 255, 0.6);
-            border-radius: 50%;
-            position: absolute;
-            animation: floatUp 8s linear infinite;
-            opacity: 0.8;
-        }
-        @keyframes floatUp {
-            0% {
-                transform: translateY(100vh) scale(1);
-                opacity: 0.8;
-            }
-            100% {
-                transform: translateY(-100vh) scale(1.5);
-                opacity: 0;
-            }
-        }
-        .bubble:nth-child(2n) {
-            animation-duration: 10s;
-            background-color: rgba(224, 41, 133, 0.6);
-        }
-        .bubble:nth-child(3n) {
-            animation-duration: 12s;
-            background-color: rgba(144, 238, 144, 0.6);
-        }
-    </style>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <!-- Navigeerimismenüü -->
+    <nav>
+        <ul>
+            <li><a href="#kes-ma-olen">Kes ma olen</a></li>
+            <li><a href="#leheküljed">Leheküljed</a></li>
+        </ul>
+    </nav>
+
     <!-- Pilt, mis on paremal ja lehe ülaosas -->
-    <img src="Riho.png" alt="Riho Sepp" width="300">
-    <!-- Pilt, mis on keskel ja väiksem -->
-    <img src="./Pildid/how_it_people_see.jpg" class="centered-image" width="1000">
+    <img src="Riho.png" alt="Riho Sepp" class="profile-image">
 
-    <h1>Kes ma olen</h1>
-    <p>Minu nimi on Riho Sepp ja ma olen IT spetsialist.</p>
+    <!-- Hero ala gradienttaustaga ja tekstiga -->
+    <div class="hero">
+        <h1>Tere tulemast minu õpimapile!</h1>
+        <p>Avasta minu teadmised ja projektid IT-maailmas.</p>
+        <div class="hero-links">
+            <button id="toggle-contact" class="button-link">Kontakt</button>
+            <a href="https://www.linkedin.com/in/riho-sepp" class="button-link" target="_blank">LinkedIn</a>
+            <a href="https://github.com/RihoSepp31" class="button-link" target="_blank">GitHub</a>
+            <a href="certificates.html" class="button-link" target="_blank">Cerfitikaadid</a>
+            <a href="./Pildid/CVKeskus_Riho_Sepp_2160872.pdf" class="button-link" target="_blank">Laadi alla minu CV</a>
 
-    <h2>Kust ma tulen</h2>
-    <p>Ma tulen Tallinnast.</p>
+        </div>
+    </div>
 
-    <h2>Minu roll</h2>
-    <p>Olen õpilane Tallinna Tööstushariduskeskuses.</p>
+    <section id="kes-ma-olen">
+        <h1>Kes ma olen</h1>
+        <p>Minu nimi on Riho Sepp ja ma olen IT spetsialist. Olen omandanud IT-süsteemide spetsialisti eriala Tallinna Polütehnikumis ja töötan hetkel kasutajatoe spetsialistina Eesti Kaitseliidu peakorteris. Lisaks on mul kogemus vanemkasutajatoe spetsialistina Siseministeeriumis, kus töötasin alates 2020. aastast.</p>
+        <p>Praegu õpin Tallinna Tööstushariduskeskuses noorem tarkvaraarendaja eriala, et täiendada oma teadmisi ja oskusi IT-valdkonnas. Olen alati olnud kirglik tehnoloogia vastu ning naudin uute lahenduste leidmist ja tarkvaraarenduse õppimist.</p>
+        <p>Minu eesmärk on ühendada oma kasutajatoe kogemus tarkvaraarenduse oskustega, et pakkuda terviklikke ja efektiivseid IT-lahendusi. Olen pühendunud pidevale enesearengule ning otsin alati uusi väljakutseid ja võimalusi enda oskuste rakendamiseks.</p>
+    </section>
 
-    <h2>Siin on minu leheküljed:</h2>
-    <a href="elutsukkel/susteemiarenduse_elutsukkel.html" class="button-link">Süsteemiarenduse elutsüklisse</a>
-    <a href="casevahendid/main.html" class="button-link">Case Vahendid</a>
-    <a href="https://rihosepp.com/" class="button-link">Portfoolium</a>
-    <a href="Bitcoin/bitcoin.html" class="button-link">bitcoin</a>
-    <a href="./UML/uml.html" class="button-link">Mis on UML</a> 
-    
-    <!-- Taustal liikuvad mullid -->
-    <div class="bubble" style="left: 10%;"></div>
-    <div class="bubble" style="left: 30%;"></div>
-    <div class="bubble" style="left: 50%;"></div>
-    <div class="bubble" style="left: 70%;"></div>
-    <div class="bubble" style="left: 90%;"></div>
+    <section id="kontaktid" style="display: none; opacity: 0; transition: opacity 0.5s ease-in-out;">
+        <h2>Kontaktid</h2>
+        <p>Email: <a href="mailto:riho.sepp@outlook.com">riho.sepp@outlook.com</a></p>
+        <p>Telefon: <a href="tel:+37256848714">56848714</a></p>
+    </section>
+
+    <!-- Lehekülgede osa, mis algselt on peidetud -->
+    <section id="leheküljed">
+        <h2>Siin on minu leheküljed:</h2>
+        <button id="toggle-pages" class="button-link">Näita lehekülgi</button>
+        <div id="pages" style="display: none; opacity: 0; transition: opacity 0.5s ease-in-out;">
+            <a href="elutsukkel/susteemiarenduse_elutsukkel.html" class="button-link">Süsteemiarenduse elutsüklisse</a>
+            <a href="casevahendid/main.html" class="button-link">Case Vahendid</a>
+            <a href="https://rihosepp.com/" class="button-link">Portfoolium</a>
+            <a href="Bitcoin/bitcoin.html" class="button-link">Bitcoin</a>
+            <a href="./UML/uml.html" class="button-link">Mis on UML</a>
+            
+        </div>
+    </section>
+
+    <script>
+        // Näita/peida lehekülgede linke sujuva animatsiooniga
+        document.getElementById('toggle-pages').addEventListener('click', function() {
+            const pages = document.getElementById('pages');
+            if (pages.style.display === 'none' || pages.style.display === '') {
+                pages.style.display = 'block';
+                setTimeout(() => {
+                    pages.style.opacity = 1;
+                }, 10);
+                this.textContent = 'Peida leheküljed';
+            } else {
+                pages.style.opacity = 0;
+                setTimeout(() => {
+                    pages.style.display = 'none';
+                }, 500);
+                this.textContent = 'Näita lehekülgi';
+            }
+        });
+
+        // Näita/peida kontaktide andmed
+        document.getElementById('toggle-contact').addEventListener('click', function() {
+            const contacts = document.getElementById('kontaktid');
+            if (contacts.style.display === 'none' || contacts.style.display === '') {
+                contacts.style.display = 'block';
+                setTimeout(() => {
+                    contacts.style.opacity = 1;
+                }, 10);
+            } else {
+                contacts.style.opacity = 0;
+                setTimeout(() => {
+                    contacts.style.display = 'none';
+                }, 500);
+            }
+        });
+    </script>
 </body>
 </html>
